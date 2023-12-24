@@ -5,6 +5,7 @@ const numbers = "0123456789"
 const symbols = "!@#$%^&*()_-+={[}]|\:;<,>.?/"
 let checkboxArray = []
 let passwordLength = 0
+let password = ""
 
 //check when copy button is clicked
 document.getElementById("copy-btn").addEventListener("click",()=>{
@@ -27,7 +28,8 @@ document.getElementById("generate-btn").addEventListener("click",()=>{
         alert(`Please select checkbox`)
     }
     else{
-        document.getElementById("password-show").value = generatePassword()
+        password = generatePassword()
+        document.getElementById("password-show").value = password
     }
 })
 
